@@ -218,6 +218,9 @@ PYTHONPATH="." python -m streamlit run src/ui/app.py
 - API docs: [http://localhost:8000/docs](http://localhost:8000/docs)
 - UI: [http://localhost:8501](http://localhost:8501)
 
+### UI Preview
+![Streamlit UI Screenshot](assets/ui_screenshot.png)
+
 ---
 
 ## Docker Deployment
