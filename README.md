@@ -219,7 +219,7 @@ PYTHONPATH="." python -m streamlit run src/ui/app.py
 - UI: [http://localhost:8501](http://localhost:8501)
 
 ### UI Preview
-![Streamlit UI Screenshot](assets/ui_screenshot.png)
+![Streamlit UI Screenshot](Screenshot 2026-04-16 235133.png)
 
 ---
 
