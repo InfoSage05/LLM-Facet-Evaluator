@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - USE_MOCK_LLM=true # Set to false and provide LLM_BASE_URL to use real model
+      - FACET_REGISTRY=/app/facets/facet_registry.json
+    volumes:
+      - ./data:/app/data
+
+  ui:
+    build: .
+    command: ["streamlit", "run", "src/ui/app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+    ports:
+      - "8501:8501"
+    environment:
+      - API_URL=http://api:8000
+    depends_on:
+      - api
